@@ -1,0 +1,349 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.question {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.question.active {
+  display: none;
+}
+
+.talk {
+  position: absolute;
+  background: url(../image/Za9f.gif);
+  height: 250px;
+  width: 200px;
+  background-size: 100% 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -80px;
+  left: 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.talk p {
+  position: absolute;
+  width: 70%;
+  margin: 20% auto;
+}
+
+.cute {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -90%);
+          transform: translate(-50%, -90%);
+  z-index: -10;
+  display: none;
+}
+
+.sad {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -90%);
+          transform: translate(-50%, -90%);
+  z-index: -11;
+}
+
+.img-sad {
+  position: absolute;
+  background: url(../image/XOsX.gif);
+  background-size: 100% 100%;
+  height: 200px;
+  width: 200px;
+  top: -100px;
+  display: none;
+}
+
+.img-sad .talk {
+  position: absolute;
+  top: -180px;
+  left: 50px;
+}
+
+.img-sad.active {
+  display: block;
+}
+
+.img-happy {
+  top: -150px;
+  position: absolute;
+  background: url(../image/6mz.gif);
+  background-size: 100% 100%;
+  height: 300px;
+  width: 300px;
+}
+
+.img-happy.active {
+  display: none;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.ctn-ques {
+  display: block;
+}
+
+.ctn-ques.active {
+  display: none;
+}
+
+.cnt-sucess.active {
+  display: block;
+}
+
+.cnt-sucess.active .img-happy {
+  display: block;
+}
+
+.cnt-sucess {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100vh;
+  width: 100vw;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url(../image/XfQA.gif);
+  background-size: 100% 100%;
+  display: none;
+}
+
+.cnt-sucess .img-happy {
+  position: relative;
+  background: url(../image/19y9.gif);
+  background-size: 100% 100%;
+  height: 300px;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.video {
+  height: 100vh;
+  position: relative;
+  background: url(https://i.gifer.com/1PyX.gif);
+  background-size: 10% 10%;
+  display: none;
+  overflow: hidden;
+}
+
+.video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 90%;
+  max-width: 80vw;
+  min-width: 500px;
+}
+
+.video.active {
+  display: block;
+}
+
+.container-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background: transparent url(https://i.gifer.com/NRI0.gif);
+  background-size: 20% 20%;
+  overflow: hidden;
+  display: none;
+}
+
+.container-card.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 400px;
+  cursor: pointer;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(2500px);
+          transform: perspective(2500px);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.card:hover {
+  -webkit-transform: perspective(2500px) rotate(5deg);
+          transform: perspective(2500px) rotate(5deg);
+  -webkit-box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2), 30px 0 50px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2), 30px 0 50px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover .card-front {
+  -webkit-transform: rotateY(-160deg);
+          transform: rotateY(-160deg);
+  background: url(../image/c98bdb34d35e1a00434f.jpg);
+  background-size: 100% 100%;
+}
+
+.card:hover .card-front .birthday-cake, .card:hover .card-front h1 {
+  visibility: hidden;
+}
+
+.card-front {
+  position: relative;
+  background: #fff url(https://i.gifer.com/Z6W8.gif);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: 40% 40%;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2), 30px 0 50px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2), 30px 0 50px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+.card-front h1 {
+  font-family: 'Ephesis';
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(120deg, red, yellow);
+  padding: 0;
+}
+
+.card-front .birthday-cake {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  background: url(https://i.gifer.com/2qco.gif);
+  top: 0;
+  background-size: 100% 100%;
+  margin: 20px auto;
+}
+
+.card-front .ballon {
+  position: absolute;
+}
+
+.card-front .ballon .ballon1 {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background: url(https://i.gifer.com/6js.gif);
+  top: 10px;
+  left: 22px;
+  background-size: 100% 100%;
+}
+
+.card-front .ballon .ballon2 {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: url(https://i.gifer.com/6k1.gif);
+  top: 30px;
+  background-size: 100% 100%;
+}
+
+.card-front .ballon .ballon3 {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background: url(https://i.gifer.com/6js.gif);
+  top: 20px;
+  background-size: 100% 100%;
+}
+
+.card-front .ballon .ballon4 {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background: url(https://i.gifer.com/6js.gif);
+  top: 0;
+  background-size: 100% 100%;
+}
+
+.card-in {
+  font-family: 'Ephesis';
+  font-weight: 800;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+.card-in h1 {
+  font-weight: 800;
+  text-align: center;
+  padding: 3px;
+}
+
+.card-in h3 {
+  font-weight: 500;
+  text-align: left;
+  padding: 4px;
+}
+
+.card-in p {
+  font-weight: 500;
+  text-align: left;
+  font-size: 20px;
+  padding: 4px;
+}
+
+.card-in h4 {
+  font-weight: 500;
+  text-align: right;
+  font-size: 30px;
+  padding: 4px;
+}
+
+.card-in .firework {
+  position: absolute;
+  bottom: 0;
+  height: 30%;
+  width: 100%;
+  background: url(https://i.gifer.com/4M57.gif);
+  background-size: 100% 100%;
+}
+/*# sourceMappingURL=main.css.map */
